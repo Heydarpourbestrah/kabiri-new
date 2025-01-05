@@ -1935,6 +1935,14 @@ hr {
     padding: 0.72em 1.8em;
   }
 }
+
+@media screen and (max-width: 25rem) {
+  .st-btn.st-style1,
+  .st-btn.st-style2 {
+    font-size: 13px;
+    padding: 0.72em 1em;
+  }
+}
 /*--------------------------------------------------------------
 7. Slider
 ----------------------------------------------------------------*/
@@ -2621,7 +2629,9 @@ hr {
   }
   .st-hero.st-style1 .st-hero-title,
   .st-hero.st-style1.st-type3 .st-hero-title {
-    font-size: 32px;
+    /* font-size: 32px; */
+    font-size: 21px;
+    line-height: 1.5;
   }
   .animated-icon-wrap {
     display: none;
@@ -7083,6 +7093,13 @@ RTL - Right to Left
   margin-right: 0;
   margin-left: 12px;
 }
+
+@media only screen and (max-width: 62rem) {
+  .rtl .st-hero-btn-group .st-btn:not(:last-child) {
+    margin-left: 0;
+  }
+}
+
 .rtl .st-hero.st-style1 .st-shedule-wrap {
   right: initial;
   left: 0;
@@ -7326,6 +7343,6 @@ RTL - Right to Left
   text-align: justify;
 }
 
-.org-color{
+.org-color {
   color: var(--org-color) !important;
 }
