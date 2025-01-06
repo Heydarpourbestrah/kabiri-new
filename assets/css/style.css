@@ -2630,7 +2630,7 @@ hr {
   .st-hero.st-style1 .st-hero-title,
   .st-hero.st-style1.st-type3 .st-hero-title {
     /* font-size: 32px; */
-    font-size: 21px;
+    font-size: 23px;
     line-height: 1.5;
   }
   .animated-icon-wrap {
@@ -3270,6 +3270,7 @@ hr {
   font-size: 15px;
   line-height: 1.6em;
 }
+
 .st-text-block-avatar .st-avatar-img {
   -webkit-box-flex: 0;
   -ms-flex: none;
@@ -3294,8 +3295,24 @@ hr {
   }
 }
 @media screen and (max-width: 575px) {
+  .st-text-block.st-style1 .st-text-block-title {
+    font-size: 18px;
+  }
+
   .st-list.st-style2 li {
     width: 100%;
+  }
+  .st-text-block-avatar .st-avatar-img {
+    width: 60px;
+    height: auto;
+  }
+
+  .st-text-block-avatar .st-avatar-name {
+    font-size: 14px;
+  }
+  .st-text-block-avatar .st-avatar-designation {
+    font-size: 13px;
+    line-height: 1.6em;
   }
 }
 /*--------------------------------------------------------------
@@ -6537,6 +6554,7 @@ hr {
 .st-accordian {
   margin-bottom: 15px;
 }
+
 .st-accordian:last-child {
   margin-bottom: 0;
 }
@@ -6563,7 +6581,7 @@ hr {
 }
 .st-accordian .st-accordian-title:hover {
   color: var(--org-color);
-  background-color: rgba(12, 184, 182, 0.1);
+  background-color: rgba(30, 54, 125, 0.08);
 }
 .st-accordian .st-accordian-body {
   border: 1px solid #eaeaea;
@@ -6576,7 +6594,7 @@ hr {
   color: #fff;
   background-color: var(--org-color);
   border-color: var(--org-color);
-  pointer-events: none;
+
   border-radius: 7px 7px 0 0;
 }
 .st-accordian.active .st-accordian-toggle {

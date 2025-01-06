@@ -664,15 +664,18 @@
     $(".st-accordian").children(".st-accordian-body").hide();
     $(".st-accordian.active").children(".st-accordian-body").show();
     $(".st-accordian-title").on("click", function () {
-      $(this)
-        .parent(".st-accordian")
-        .siblings()
-        .children(".st-accordian-body")
-        .slideUp(250);
-      $(this).siblings().slideDown(250);
-      /* Accordian Active Class */
-      $(this).parents(".st-accordian").addClass("active");
-      $(this).parent(".st-accordian").siblings().removeClass("active");
+      var $parent = $(this).parent(".st-accordian");
+      var $body = $parent.children(".st-accordian-body");
+
+      if ($parent.hasClass("active")) {
+        // Close the currently open item
+        $body.slideUp(250);
+        $parent.removeClass("active");
+      } else {
+        // Open the clicked item without affecting others
+        $body.slideDown(250);
+        $parent.addClass("active");
+      }
     });
   }
 
