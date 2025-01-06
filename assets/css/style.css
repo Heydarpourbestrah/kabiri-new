@@ -53,6 +53,27 @@
   --org-color: #1e367d;
 }
 
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1e387c #d2d7e5;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 51px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #d2d7e5;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #1e387c;
+  border-radius: 44px;
+  border: 39px solid #ffffff;
+}
 /*--------------------------------------------------------------
 1. Typography
 ----------------------------------------------------------------*/
@@ -1507,10 +1528,10 @@ hr {
   .st-nav .st-nav-list li {
     position: relative;
   }
-  .st-nav .st-nav-list li a.active {
+  .st-nav .st-nav-list li:not(:first-child) a.active {
     color: var(--org-color);
   }
-  .st-nav .st-nav-list li a.active:before {
+  .st-nav .st-nav-list li:not(:first-child) a.active:before {
     width: 100%;
   }
   .st-nav .st-nav-list ul {
