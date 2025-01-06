@@ -1846,6 +1846,14 @@ hr {
   transition: all 0.4s ease;
   border: 1px solid transparent;
 }
+
+@media only screen and (max-width: 36rem) {
+  .st-btn.st-style1,
+  .st-btn.st-style2 {
+    min-width: 220px;
+  }
+}
+
 .st-btn.st-style1.st-rounded,
 .st-btn.st-style2.st-rounded {
   border-radius: 1.6em;
@@ -1857,7 +1865,7 @@ hr {
 }
 .st-btn.st-style1.whatsapp iconify-icon,
 .st-btn.st-style2.whatsapp iconify-icon {
-  font-size: 24px;
+  font-size: 21px;
   color: #25d366;
 }
 
@@ -2470,7 +2478,7 @@ hr {
   margin: auto;
 }
 .st-hero-text.st-style1 .st-btn {
-  min-width: 152px;
+  min-width: 180px;
 }
 
 .st-hero.st-style1 .st-hero-bg {
@@ -2688,6 +2696,15 @@ hr {
   }
   .animated-icon-wrap {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 26.25rem) {
+  .st-hero.st-style1 .st-hero-title,
+  .st-hero.st-style1.st-type3 .st-hero-title {
+    /* font-size: 32px; */
+    font-size: 23px;
+    line-height: 1.5;
   }
 }
 .st-wave-animation {
