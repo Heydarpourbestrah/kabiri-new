@@ -150,6 +150,7 @@ html {
   font-weight: 400;
   line-height: 1.6em;
   overflow-x: hidden;
+  position: relative;
 }
 
 h1,
@@ -1264,6 +1265,23 @@ hr {
   font-weight: 700;
   color: var(--org-color);
 }
+.st-top-header-btn iconify-icon {
+  font-size: 21px;
+  color: var(--org-color);
+  transition: all 0.3s;
+}
+
+.st-top-header-btn.whatsapp:hover {
+  color: #25d366;
+}
+
+.st-top-header-btn.whatsapp iconify-icon {
+  color: #25d366;
+}
+.st-top-header-btn.whatsapp:hover iconify-icon {
+  color: #25d366;
+}
+
 .st-top-header-btn:hover {
   color: #111;
 }
@@ -1826,10 +1844,45 @@ hr {
   outline: none;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+  border: 1px solid transparent;
 }
 .st-btn.st-style1.st-rounded,
 .st-btn.st-style2.st-rounded {
   border-radius: 1.6em;
+}
+
+.st-btn.st-style1 iconify-icon,
+.st-btn.st-style2 iconify-icon {
+  font-size: 20px;
+}
+.st-btn.st-style1.whatsapp iconify-icon,
+.st-btn.st-style2.whatsapp iconify-icon {
+  font-size: 24px;
+  color: #25d366;
+}
+
+.st-btn.st-style1.whatsapp {
+  border: 1px solid transparent;
+  transition: all 0.3s;
+}
+
+.st-btn.st-style1.whatsapp.white-bg {
+  border: 1px solid var(--org-color);
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s;
+}
+
+.st-btn.st-style1.whatsapp.white-bg:hover {
+  background-color: #25d366;
+  color: white;
+}
+
+.st-btn.st-style1.whatsapp.white-bg:hover iconify-icon {
+  color: white;
+}
+
+.st-btn.st-style1.whatsapp:hover {
+  border: 1px solid #25d366;
 }
 
 .st-btn.st-style1.st-type1 {
@@ -1861,7 +1914,7 @@ hr {
 
 .st-btn.st-style1.st-color3 {
   background: #fff;
-  color: #222;
+  color: var(--org-color);
 }
 
 .st-btn.st-style1.st-color4 {
@@ -2630,7 +2683,7 @@ hr {
   .st-hero.st-style1 .st-hero-title,
   .st-hero.st-style1.st-type3 .st-hero-title {
     /* font-size: 32px; */
-    font-size: 23px;
+    font-size: 28px;
     line-height: 1.5;
   }
   .animated-icon-wrap {
@@ -7000,7 +7053,7 @@ hr {
   transition: all 0.3s ease;
 }
 #st-backtotop:hover {
-  background-color: rgba(12, 184, 182, 0.8);
+  background-color: #4b5e97;
 }
 
 .st-footer-contact-list li {
@@ -7363,4 +7416,62 @@ RTL - Right to Left
 
 .org-color {
   color: var(--org-color) !important;
+}
+
+/* CTA Fixed Button */
+.cta-fixed {
+  position: fixed;
+  color: white;
+  /* background-color: var(--org-color); */
+  background-color: #25d366;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  bottom: 40px;
+  right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 500;
+  font-size: 38px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 36rem) {
+  .cta-fixed {
+    bottom: 25px;
+    right: 12px;
+  }
+}
+
+.cta-fixed::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: red;
+  right: 10px;
+  top: 3px;
+  border-radius: 100%;
+  animation: ripple 1s linear infinite;
+}
+
+.cta-fixed a,
+.cta-fixed a:link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(242, 99, 34, 0.3),
+      0 0 0 0.05em rgba(242, 99, 34, 0.3), 0 0 0 0.1em rgba(242, 99, 34, 0.3),
+      0 0 0 0.2em rgba(242, 99, 34, 0.3);
+  }
+
+  to {
+    box-shadow: 0 0 0 0.2em rgba(242, 99, 34, 0.3),
+      0 0 0 0.3em rgba(242, 99, 34, 0.3), 0 0 0 0.4em rgba(242, 99, 34, 0.3),
+      0 0 0 0.5em transparent;
+  }
 }
